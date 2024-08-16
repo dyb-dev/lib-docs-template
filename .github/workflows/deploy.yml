@@ -47,6 +47,8 @@ jobs:
         # 如果不使用 pnpm 可以删除该步骤
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
+        with:
+          version: 8.15.5
 
       - name: Setup Node
         uses: actions/setup-node@v4
