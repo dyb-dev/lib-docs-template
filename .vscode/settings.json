@@ -1,23 +1,18 @@
 // 指定vscode编辑器的行为方式、外观和功能特性，以及扩展插件的配置选项
 
 {
-    // #region CODE: vscode基础配置
+    // #region CODE: vscode 基础配置
 
     // 开启Prettier ESLint保存自动格式化（formatOnSave与codeActionsOnSave冲突，会格式化2次，所以不在codeActionsOnSave中写）
     "editor.formatOnSave": true,
-    // 配置使用格式化插件
     "editor.codeActionsOnSave": {
         // 启用stylelint自动保存格式化,explicit:只会在手动保存时生效
         "source.fixAll.stylelint": "explicit",
         // 启用markdownlint自动保存格式化
         "source.fixAll.markdownlint": "explicit"
     },
-
     // 设置全局默认格式化插件，无需手动设置
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-    // 设置 prettier格式化 在 eslint格式化 前执行
-    "vs-code-prettier-eslint.prettierLast": false,
-
     "[scss]": {
         "editor.defaultFormatter": "stylelint.vscode-stylelint"
     },
@@ -27,10 +22,25 @@
     "[css]": {
         "editor.defaultFormatter": "stylelint.vscode-stylelint"
     },
+    // 设置 prettier格式化 在 eslint格式化 前执行
+    "vs-code-prettier-eslint.prettierLast": false,
+    "editor.linkedEditing": true,
+    "editor.stickyScroll.enabled": true,
+    "workbench.tree.indent": 10,
+    "files.defaultLanguage": "html",
+    "explorer.compactFolders": false,
+    "search.exclude": {
+        "**/.history": true,
+        "**/cache": true
+    },
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#1d375bb6"
+    },
+    "git.autofetch": true,
 
     // #endregion
 
-    // #region CODE: eslint插件配置
+    // #region CODE: eslint 插件配置
 
     // 启用工作区文件夹的 ESLint,默认:true
     "eslint.enable": true,
@@ -51,24 +61,9 @@
     // 传递额外的参数给 Node.js 运行时,示例：--max_old_space_size 增加 Node.js 运行时的最大堆内存大小，处理大型项目或运行耗费大量内存的操作时防止出现内存不足
     "eslint.execArgv": ["--max_old_space_size=4096"],
     // 尝试 lingt 检测文件的语言,启用默认值
-    "eslint.probe": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        "html",
-        "vue"
-    ],
+    "eslint.probe": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html", "vue"],
     // 强制 lingt 检测文件的语言,默认:["javascript", "javascriptreact"]
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        "vue",
-        "json",
-        "jsonc"
-    ],
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "json", "jsonc"],
     // 启用 ESLint 修复功能，只对lint检查的文件
     "eslint.format.enable": true,
     // 指定如何计算 ESLint 使用的工作目录,默认:location
@@ -99,7 +94,7 @@
 
     // #endregion
 
-    // #region CODE: stylelint插件配置
+    // #region CODE: stylelint 插件配置
 
     // 设置包管理器，以便正常解析stylelint依赖 默认：npm
     "stylelint.packageManager": "pnpm",
@@ -114,19 +109,21 @@
 
     // #endregion
 
-    // #region CODE: markdownlint插件配置
+    // #region CODE: markdownlint 插件配置
 
     // 规则
     "markdownlint.config": {
         "default": true,
         "MD007": { "indent": 4 },
         "no-hard-tabs": true,
-        "no-inline-html":false,
-        "first-line-h1":false,
+        "no-inline-html": false,
+        "first-line-h1": false,
         // 允许md文件内嵌html
         "MD033": false,
         // 允许使用 **Input** 强调语法
-        "MD036": false
+        "MD036": false,
+        // 禁用限制空格数量的规则
+        "MD030": false
     },
     // lint 检查时机,默认: onType:输入代码时
     "markdownlint.run": "onType",
@@ -140,19 +137,160 @@
 
     // #endregion
 
-    // #region CODE: code-spell-checker插件 设置黑名单单词 项目中常用的单词，避免拼写错误被误报为错误
+    // #region CODE: Vue - Official 插件配置
 
-    "cSpell.words": [
+    // 在选项包装器中显示内联提示
+    "vue.inlayHints.optionsWrapper": true,
+    // 为 v-bind 的简写语法显示内联提示
+    "vue.inlayHints.vBindShorthand": true,
+    // 在内联处理程序前显示提示
+    "vue.inlayHints.inlineHandlerLeading": true,
+    // 显示缺少的 props 提示
+    "vue.inlayHints.missingProps": true,
+    // 自动插入 .value
+    "vue.autoInsert.dotValue": true,
+    // 在文件移动时自动更新导入路径
+    "vue.updateImportsOnFileMove.enabled": true,
+
+    // #endregion
+
+    // #region CODE: git-commit-plugin 插件配置
+
+    // git提交信息最大允许字符数
+    "GitCommitPlugin.MaxSubjectCharacters": 60,
+
+    // #endregion
+
+    // #region CODE: koroFileHeader 插件配置
+
+    // 头部注释
+    "fileheader.customMade": {
+        // 作者:获取git用户名
+        "Author": "git config user.name",
+        // 文件创建时间
+        "Date": "Do not edit",
+        // 最后修改人
+        "LastEditors": "git config user.name",
+        // 最后修改时间
+        "LastEditTime": "Do not edit",
+        // 文件路径
+        "FilePath": "Do not edit",
+        // 文件描述
+        "Description": ""
+    },
+    "fileheader.configObj": {
+        // 自动添加头部注释开启才能自动添加
+        "autoAdd": false
+    },
+
+    // #endregion
+
+    // #region CODE: Document This 插件配置
+
+    // 是否包含 @date 标签
+    "docthis.includeDateTag": true,
+    // 指定 @date 标签中日期的格式
+    "docthis.dateTagFormat": "dd/mm/yyyy/  HH:MM:ss",
+    // 是否自动包含 @author 标签
+    "docthis.includeAuthorTag": true,
+    // 指定 @author 标签中的作者名称
+    "docthis.authorName": "dyb",
+
+    // #endregion
+
+    // #region CODE: TODO Highlight 插件配置
+
+    "todohighlight.keywords": [
+        {
+            "text": "HOOKS:",
+            "color": "#ffffff",
+            "backgroundColor": "#8605f4",
+            "borderRadius": "3px"
+        },
+        {
+            "text": "STATIC:",
+            "color": "#ffffff",
+            "backgroundColor": "#f98803",
+            "borderRadius": "3px"
+        },
+        {
+            "text": "REF:",
+            "color": "#ffffff",
+            "backgroundColor": "#fb06c4",
+            "borderRadius": "3px"
+        },
+        {
+            "text": "REACTIVE:",
+            "color": "#ffffff",
+            "backgroundColor": "#03b224",
+            "borderRadius": "3px"
+        },
+        {
+            "text": "COMPUTED:",
+            "color": "#ffffff",
+            "backgroundColor": "#c703f8",
+            "borderRadius": "3px"
+        },
+        {
+            "text": "CODE:",
+            "color": "#ffffff",
+            "backgroundColor": "#065cfb",
+            "borderRadius": "3px"
+        },
+        {
+            "text": "WATCH:",
+            "color": "#ffffff",
+            "backgroundColor": "#FF5600",
+            "borderRadius": "3px"
+        },
+        {
+            "text": "LIFECYCLE:",
+            "color": "#ffffff",
+            "backgroundColor": "#0399f8",
+            "borderRadius": "3px"
+        },
+        {
+            "text": "EVENT:",
+            "color": "#ffffff",
+            "backgroundColor": "#4e04f5",
+            "borderRadius": "3px"
+        },
+        {
+            "text": "FUN:",
+            "color": "#ffffff",
+            "backgroundColor": "#07c4d0",
+            "borderRadius": "3px"
+        },
+        {
+            "text": "DEBUG:",
+            "color": "#ffffff",
+            "backgroundColor": "#F00",
+            "borderRadius": "3px"
+        }
+    ],
+
+    // #endregion
+
+    // #region CODE: Code Spell Checker 插件配置
+
+    "cSpell.userWords": [
+        "autofetch",
         "axios",
         "Cacheable",
         "camelcase",
         "crossorigin",
         "deepmerge",
+        "docthis",
+        "echarts",
         "endregion",
+        "fileheader",
+        "frontmatter",
         "funs",
         "gltf",
         "hbuilderx",
+        "iife",
         "jsnext",
+        "Lazyload",
         "localforage",
         "micromessenger",
         "njsproj",
@@ -161,89 +299,23 @@
         "portfinder-sync",
         "precache",
         "precaching",
+        "radash",
         "reportDescriptionlessDisables",
         "stylelint",
         "stylelintignore",
         "stylelintrc",
+        "timeformat",
+        "todohighlight",
+        "tsbuildinfo",
         "unpackage",
+        "unplugin",
         "vconsole",
         "VITE",
         "vitepress",
+        "vueuse",
+        "webp",
         "Weixin",
         "zepto"
-    ],
-
-    // #endregion
-
-    // #region CODE:  Todo Highlight插件 关键字扩展配置
-
-    "todohighlight.keywords": [
-        {
-            "text": "HOOKS:",
-            "color": "#ffffff",
-            "backgroundColor": "#8605f4",
-            "borderRadius": "3px",
-        },
-        {
-            "text": "STATIC:",
-            "color": "#ffffff",
-            "backgroundColor": "#f98803",
-            "borderRadius": "3px",
-        },
-        {
-            "text": "REF:",
-            "color": "#ffffff",
-            "backgroundColor": "#fb06c4",
-            "borderRadius": "3px",
-        },
-        {
-            "text": "REACTIVE:",
-            "color": "#ffffff",
-            "backgroundColor": "#03b224",
-            "borderRadius": "3px",
-        },
-        {
-            "text": "COMPUTED:",
-            "color": "#ffffff",
-            "backgroundColor": "#c703f8",
-            "borderRadius": "3px",
-        },
-        {
-            "text": "CODE:",
-            "color": "#ffffff",
-            "backgroundColor": "#065cfb",
-            "borderRadius": "3px",
-        },
-        {
-            "text": "WATCH:",
-            "color": "#ffffff",
-            "backgroundColor": "#FF5600",
-            "borderRadius": "3px",
-        },
-        {
-            "text": "LIFECYCLE:",
-            "color": "#ffffff",
-            "backgroundColor": "#0399f8",
-            "borderRadius": "3px",
-        },
-        {
-            "text": "EVENT:",
-            "color": "#ffffff",
-            "backgroundColor": "#4e04f5",
-            "borderRadius": "3px",
-        },
-        {
-            "text": "FUN:",
-            "color": "#ffffff",
-            "backgroundColor": "#07c4d0",
-            "borderRadius": "3px",
-        },
-        {
-            "text": "DEBUG:",
-            "color": "#ffffff",
-            "backgroundColor": "#F00",
-            "borderRadius": "3px",
-        },
     ]
 
     // #endregion

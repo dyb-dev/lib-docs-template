@@ -1,6 +1,6 @@
 {
     "name": "lib-docs-template",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "基于`vitepress`搭建的库-文档-模板",
     "author": "dyb",
     "license": "MIT",
@@ -8,10 +8,10 @@
     "main": ".vitepress/theme/index.js",
     "type": "module",
     "scripts": {
-        "docs:dev": "vitepress dev",
-        "docs:build": "pnpm type-check & pnpm docs:build-only",
-        "docs:build-only": "vitepress build",
-        "docs:preview": "vitepress preview",
+        "dev": "vitepress dev",
+        "build": "pnpm type-check & pnpm build-only",
+        "build-only": "vitepress build",
+        "preview": "vitepress preview",
         "type-check": "vue-tsc --build --force"
     },
     "engines": {

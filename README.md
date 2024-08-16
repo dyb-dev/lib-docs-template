@@ -48,7 +48,7 @@ pnpm install
 ### 启动本地开发服务器
 
 ```bash
-pnpm docs:dev
+pnpm dev
 ```
 
 ## 构建文档
@@ -56,7 +56,7 @@ pnpm docs:dev
 ### 生成静态文档文件
 
 ```bash
-pnpm docs:build
+pnpm build
 ```
 
 ## 预览构建结果
@@ -64,7 +64,7 @@ pnpm docs:build
 ### 预览构建后的文档
 
 ```bash
-pnpm docs:preview
+pnpm preview
 ```
 
 ## 许可证
