@@ -48,7 +48,8 @@ export function getAvailableIPv4HostIP(): string {
 
     if (!_address) {
 
-        throw new Error("getAvailableIPv4HostIP() 获取可用IPv4主机ip失败！")
+        console.error("getAvailableIPv4HostIP() 获取可用IPv4主机ip失败！")
+        return "localhost"
 
     }
 
