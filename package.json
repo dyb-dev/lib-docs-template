@@ -1,6 +1,6 @@
 {
     "name": "lib-docs-template",
-    "version": "0.0.3",
+    "version": "0.0.2",
     "description": "基于`vitepress`搭建的库-文档-模板",
     "author": "dyb",
     "license": "MIT",
@@ -28,7 +28,8 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/dyb-dev/lib-docs-template"
+        "url": "https://github.com/vuejs/vitepress",
+        "directory": "/src"
     },
     "keywords": [
         "lib",
