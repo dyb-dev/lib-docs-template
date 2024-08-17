@@ -1,8 +1,8 @@
 /*
  * @Author: dyb
  * @Date: 2023-11-08 15:55:25
- * @LastEditors: 丁雁兵
- * @LastEditTime: 2024-08-16 16:40:59
+ * @LastEditors: dyb
+ * @LastEditTime: 2024-08-18 00:59:29
  * @FilePath: /lib-docs-template/tsconfig.json
  * @Description: ts配置文件
  */
@@ -40,7 +40,7 @@
         // 启用增量编译模式
         "composite": true,
         // 指定用于存储 TypeScript 编译器在增量编译模式下生成的编译信息的文件路径，以便下次编译时可以使用
-        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.docs.tsbuildinfo",
         // 不允许隐式的any类型存在
         "noImplicitAny": true,
         // 跳过对所有定义文件（即 .d.ts 文件）的类型检查
