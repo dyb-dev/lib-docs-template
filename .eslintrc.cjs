@@ -160,7 +160,7 @@ module.exports = {
                 // #region CODE: eslint-plugin-import 插件规则
 
                 // 忽略虚拟模块
-                "import/no-unresolved": ["error", { ignore: ["^virtual:"] }],
+                "import/no-unresolved": ["error", { ignore: ["^virtual:", "@"] }],
                 "import/order": [
                     "error",
                     {
