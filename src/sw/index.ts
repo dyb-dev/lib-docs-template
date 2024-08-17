@@ -4,7 +4,7 @@
  * @author dyb
  * @date 24/04/2024/  10:54:36
  */
-export async function setupServiceWorker() {
+const setupServiceWorker = async() => {
 
     try {
 
@@ -34,3 +34,5 @@ export async function setupServiceWorker() {
     }
 
 }
+
+export { setupServiceWorker }

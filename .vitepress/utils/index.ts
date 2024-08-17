@@ -15,7 +15,7 @@ import pkg from "../../package.json"
  * @param {ImportMetaEnv} env - 环境变量
  * @returns {*}  {IProjectInfo} - 项目信息
  */
-export function generateProjectInfo(env: ImportMetaEnv): IProjectInfo {
+const generateProjectInfo = (env: ImportMetaEnv): IProjectInfo => {
 
     // @ts-ignore
     const { name, version, devDependencies, dependencies = {} } = pkg
@@ -42,10 +42,9 @@ export function generateProjectInfo(env: ImportMetaEnv): IProjectInfo {
  * @export
  * @returns {*}  {string}
  */
-export function getAvailableIPv4HostIP(): string {
+const getAvailableIPv4HostIP = (): string => {
 
     const _address = networkInterfaces().en0?.find(details => !details.internal && details.family === "IPv4")?.address
-
     if (!_address) {
 
         console.error("getAvailableIPv4HostIP() 获取可用IPv4主机ip失败！")
@@ -76,7 +75,7 @@ interface ISetupVitePWAParam {
  * @param {ISetupVitePWAParam} param - 参数
  * @returns {*}  {any[]}
  */
-export function setupVitePWAPlugin(param: ISetupVitePWAParam): any[] {
+const setupVitePWAPlugin = (param: ISetupVitePWAParam): any[] => {
 
     const {
         projectRootDir,
@@ -177,3 +176,5 @@ export function setupVitePWAPlugin(param: ISetupVitePWAParam): any[] {
     })
 
 }
+
+export { generateProjectInfo, getAvailableIPv4HostIP, setupVitePWAPlugin }
