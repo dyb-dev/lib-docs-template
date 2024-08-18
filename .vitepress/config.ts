@@ -2,7 +2,7 @@
  * @Author: dyb
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb
- * @LastEditTime: 2024-08-18 18:18:37
+ * @LastEditTime: 2024-08-18 19:23:57
  * @FilePath: /lib-docs-template/.vitepress/config.ts
  * @Description: VitePress配置文件
  */
@@ -199,7 +199,7 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
             }
         },
 
-        // markdown-it配置（作用于`markdown`文件） 示例:(https://vitepress.dev/zh/vitepress/markdown#advanced-configuration)
+        // markdown-it配置（作用于`markdown`文件）
         markdown: {
             config(md) {
 
