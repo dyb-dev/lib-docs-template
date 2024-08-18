@@ -118,6 +118,8 @@
         "no-hard-tabs": true,
         "no-inline-html": false,
         "first-line-h1": false,
+        // 允许标题内容重复
+        "MD024": false,
         // 允许md文件内嵌html
         "MD033": false,
         // 允许使用 **Input** 强调语法
