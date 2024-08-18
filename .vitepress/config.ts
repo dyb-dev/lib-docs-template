@@ -2,7 +2,7 @@
  * @Author: dyb
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb
- * @LastEditTime: 2024-08-16 20:20:05
+ * @LastEditTime: 2024-08-18 17:47:40
  * @FilePath: /lib-docs-template/.vitepress/config.ts
  * @Description: VitePress配置文件
  */
@@ -180,7 +180,7 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
                         root: {
                             translations: {
                                 button: {
-                                    buttonText: "搜索标题"
+                                    buttonText: "搜索"
                                 },
                                 modal: {
                                     displayDetails: "显示详情",
