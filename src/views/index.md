@@ -6,7 +6,7 @@ markdownStyles: true
 hero:
     name: Lib-Docs-Template
     text: Hello-Word
-    tagline: 搭建NPM包的使用文档
+    tagline: 搭建库的使用文档
     actions:
         - theme: brand
           text: 参考
