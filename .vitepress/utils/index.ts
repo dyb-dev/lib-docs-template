@@ -93,6 +93,9 @@ const setupVitePWAPlugin = (param: ISetupVitePWAParam): any[] => {
     /** STATIC: 哈希文件名的正则表达式模式 */
     const _hashPattern = /\..{8}\./
 
+    /** STATIC: 输出目录绝对路径 */
+    const _outDirAbsolutePath = resolve(projectRootDir, `./${VITE_OUT_DIR}`)
+
     return VitePWA({
         // manifest清单配置
         manifest: {
@@ -126,7 +129,7 @@ const setupVitePWAPlugin = (param: ISetupVitePWAParam): any[] => {
         // strategies:injectManifest 时 自定义 service worker 脚本文件名 默认: sw.js
         filename: "sw.ts",
         // 编译后的 Service Worker 脚本输出目录 默认: dist
-        outDir: resolve(projectRootDir, `./${VITE_OUT_DIR}`),
+        outDir: _outDirAbsolutePath,
         // service worker的更新方式 autoUpdate:自动 prompt:手动 默认值: prompt
         registerType: "autoUpdate",
         // strategies:injectManifest 时配置
@@ -142,7 +145,7 @@ const setupVitePWAPlugin = (param: ISetupVitePWAParam): any[] => {
             // 预缓存的文件的最大大小 默认: 2097152 字节（2MB）
             maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
             // `globPatterns`根据此目录来匹配文件
-            globDirectory: VITE_OUT_DIR,
+            globDirectory: _outDirAbsolutePath,
             // 首次进入网站时，预缓存清单需要包含的资源类型（注意: 预缓存清单只在生产环境有效）
             globPatterns: [
                 "**/*.{ico,html,js,css,webp,jpg,jpeg,png,gif,svg,ttf,woff,woff2,otf,eot,mp3,wav,ogg,mp4,webm,json,bmp,psd,tiff,tga,eps}"
