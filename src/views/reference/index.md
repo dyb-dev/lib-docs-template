@@ -118,6 +118,9 @@ Title <Badge type="danger">caution</Badge>
 
 ## 代码高亮 {#code-highlight}
 
+-   方法1: `{5-8}`、`{4,7,9}`、`{4,7-13,16,23-27,40}`
+-   方法2: `// [!code highlight]`
+
 **输入**
 
 ````md
@@ -126,7 +129,7 @@ export default {
   data () {
     return {}
   }
-}
+} // [!!code highlight]
 ```
 ````
 
@@ -137,7 +140,7 @@ export default {
   data () {
     return {}
   }
-}
+} // [!code highlight]
 ```
 
 ## 代码聚焦 {#code-focus}
