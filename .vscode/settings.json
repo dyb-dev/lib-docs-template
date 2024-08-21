@@ -196,7 +196,7 @@
     // 是否自动包含 @author 标签
     "docthis.includeAuthorTag": true,
     // 指定 @author 标签中的作者名称
-    "docthis.authorName": "dyb",
+    "docthis.authorName": "dyb-dev",
 
     // #endregion
 

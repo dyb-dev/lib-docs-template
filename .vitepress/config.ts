@@ -1,8 +1,8 @@
 /*
- * @Author: dyb
+ * @Author: dyb-dev
  * @Date: 2024-06-24 19:59:56
- * @LastEditors: dyb
- * @LastEditTime: 2024-08-18 19:28:41
+ * @LastEditors: dyb-dev
+ * @LastEditTime: 2024-08-21 15:25:14
  * @FilePath: /lib-docs-template/.vitepress/config.ts
  * @Description: VitePress配置文件
  */
@@ -122,7 +122,7 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
                 message:
                     'Released under the <a href="https://github.com/dyb-dev/lib-docs-template/blob/main/LICENSE" target="_blank">MIT License</a>.',
                 // 版权信息
-                copyright: 'Copyright © 2019-present <a href="https://github.com/dyb-dev" target="_blank">dyb</a>'
+                copyright: 'Copyright © 2019-present <a href="https://github.com/dyb-dev" target="_blank">dyb-dev</a>'
             },
             // 页面编辑链接配置
             editLink: {
