@@ -9,7 +9,7 @@
     "type": "module",
     "scripts": {
         "dev": "vitepress dev",
-        "build": "pnpm type-check & pnpm build-only",
+        "build": "npm run type-check & npm run build-only",
         "build-only": "vitepress build",
         "preview": "vitepress preview",
         "type-check": "vue-tsc --build --force"
