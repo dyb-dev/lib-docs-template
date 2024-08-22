@@ -4,12 +4,7 @@
 
 ## 项目简介
 
-<!-- prettier-ignore-start -->
-
-<!-- prettier格式化会自动在 `_blank` 前面加上斜杠导致语法失效，因此这里忽略 -->
-Lib-Docs-Template 提供了一个库文档的基本模板，该项目基于 [VitePress](https://vitepress.dev/zh/){:target="_blank"} 构建，支持本地 HTTPS 服务和 PWA 功能。该模板预配置了一些常用的开发工具和插件，帮助你快速构建和发布文档。
-
-<!-- prettier-ignore-end -->
+Lib-Docs-Template 提供了一个库文档的基本模板，该项目基于 [VitePress](https://vitepress.dev/zh/) 构建，支持本地 HTTPS 服务和 PWA 功能。该模板预配置了一些常用的开发工具和插件，帮助你快速构建和发布文档。
 
 ## 功能特点
 
