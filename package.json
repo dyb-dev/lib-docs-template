@@ -5,14 +5,14 @@
     "author": "dyb-dev",
     "license": "MIT",
     "private": true,
-    "main": ".vitepress/theme/index.js",
+    "main": "./.vitepress/theme/index.ts",
     "type": "module",
     "scripts": {
         "dev": "vitepress dev",
-        "build": "npm run type-check & npm run build-only",
+        "build": "npm run ts-check & npm run build-only",
         "build-only": "vitepress build",
         "preview": "vitepress preview",
-        "type-check": "vue-tsc --build --force"
+        "ts-check": "vue-tsc --build --force"
     },
     "engines": {
         "node": ">=18.0.0",
@@ -30,6 +30,11 @@
         "type": "git",
         "url": "https://github.com/dyb-dev/lib-docs-template"
     },
+    "homepage": "https://github.com/dyb-dev/lib-docs-template",
+    "bugs": {
+        "url": "https://github.com/dyb-dev/lib-docs-template/issues",
+        "directory": "https://github.com/dyb-dev/lib-docs-template"
+    },
     "keywords": [
         "lib",
         "docs",
@@ -38,28 +43,18 @@
         "文档模板"
     ],
     "devDependencies": {
-        "@tsconfig/node20": "^20.1.4",
-        "@typescript-eslint/eslint-plugin": "^6.2.1",
-        "@typescript-eslint/parser": "^6.2.1",
+        "@dyb-dev/eslint-config": "^0.1.0",
+        "@dyb-dev/prettier-config": "^0.0.5",
+        "@dyb-dev/stylelint-config": "^0.0.3",
+        "@dyb-dev/ts-config": "^0.0.3",
         "@vitepress-demo-preview/component": "^2.3.2",
         "@vitepress-demo-preview/plugin": "^1.2.3",
-        "@vue/tsconfig": "^0.5.1",
         "eslint": "^8.57.0",
-        "eslint-import-resolver-typescript": "^3.6.1",
-        "eslint-plugin-import": "^2.29.1",
-        "eslint-plugin-jsdoc": "^48.2.3",
-        "eslint-plugin-jsonc": "^2.15.1",
-        "eslint-plugin-vue": "^9.25.0",
         "portfinder-sync": "^0.0.2",
         "prettier": "^3.3.2",
         "prettier-eslint": "^16.3.0",
         "sass": "^1.75.0",
         "stylelint": "^16.3.1",
-        "stylelint-config-rational-order": "^0.1.2",
-        "stylelint-config-recommended-vue": "^1.5.0",
-        "stylelint-config-standard-scss": "^13.1.0",
-        "stylelint-order": "^6.0.4",
-        "stylelint-prettier": "^5.0.0",
         "typescript": "^5.4.5",
         "unplugin-vue-components": "^0.27.4",
         "vite-plugin-mkcert": "^1.17.5",
