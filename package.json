@@ -56,7 +56,6 @@
         "sass": "^1.75.0",
         "stylelint": "^16.3.1",
         "typescript": "^5.4.5",
-        "unplugin-vue-components": "^0.27.4",
         "vite-plugin-mkcert": "^1.17.5",
         "vite-plugin-pwa": "^0.20.1",
         "vitepress": "^1.2.3",
