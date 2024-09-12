@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-12 12:32:42
+ * @LastEditTime: 2024-09-12 16:06:36
  * @FilePath: /lib-docs-template/.vitepress/config.ts
  * @Description: VitePress配置文件
  */
@@ -57,8 +57,17 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
     /** STATIC: 项目信息 */
     const __PROJECT_INFO__ = generateProjectInfo(_env)
 
+    /** STATIC: 路径参数 */
+    const _query = `?version=${__PROJECT_INFO__.version}`
+
     /** STATIC: logo路径 需要加版本号保证PWA模式下正常离线缓存 */
-    const _logoPath = `/image/logo.svg?version=${__PROJECT_INFO__.version}`
+    const _logoPath = `/image/logo.svg${_query}`
+
+    /** STATIC: 图标路径前缀 */
+    const _faviconPathPrefix = isDevMode ? "" : VITE_PROJECT_ASSETS_DIR_PREFIX
+
+    /** STATIC: favicon路径 需要加版本号保证PWA模式下正常离线缓存 */
+    const _faviconPath = `${_faviconPathPrefix}/image/logo.svg${_query}`
 
     /** STATIC: 端口号 */
     const _port = getPort(~~VITE_PORT)
@@ -94,7 +103,7 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
                 {
                     rel: "icon",
                     type: "image/svg+xml",
-                    href: _logoPath
+                    href: _faviconPath
                 }
             ]
         ],
