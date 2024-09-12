@@ -43,7 +43,7 @@
         "文档模板"
     ],
     "devDependencies": {
-        "@dyb-dev/eslint-config": "^0.1.0",
+        "@dyb-dev/eslint-config": "^0.1.1",
         "@dyb-dev/prettier-config": "^0.0.5",
         "@dyb-dev/stylelint-config": "^0.0.3",
         "@dyb-dev/ts-config": "^0.0.3",

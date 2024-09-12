@@ -28,8 +28,8 @@ importers:
         version: 2.2.2(vue@3.4.38(typescript@5.5.4))
     devDependencies:
       '@dyb-dev/eslint-config':
-        specifier: ^0.1.0
-        version: 0.1.0(eslint@8.57.0)(typescript@5.5.4)
+        specifier: ^0.1.1
+        version: 0.1.1(eslint@8.57.0)(typescript@5.5.4)
       '@dyb-dev/prettier-config':
         specifier: ^0.0.5
         version: 0.0.5(prettier@3.3.3)
@@ -810,8 +810,8 @@ packages:
   '@dual-bundle/import-meta-resolve@4.1.0':
     resolution: {integrity: sha512-+nxncfwHM5SgAtrVzgpzJOI1ol0PkumhVo469KCf9lUi21IGcY90G98VuHm9VRrUypmAzawAHO9bs6hqeADaVg==}
 
-  '@dyb-dev/eslint-config@0.1.0':
-    resolution: {integrity: sha512-hINBp3QTC7BPwPLmI9RI5gJdvh1bmpZPWuz4uXPUbG0DwNk2UpAac8g+PNhDkBy3zMcY//W8pam13KSZ+Nuqyw==}
+  '@dyb-dev/eslint-config@0.1.1':
+    resolution: {integrity: sha512-A3NBTKyvrAtYUX47YAZLNhu8+yyWGDc48rPjt+9gBQawMn1laERwWBj3iLSSiewfEd+hP/GP6TZovO7w3zy/pA==}
     engines: {node: '>=18.0.0', pnpm: '>=8.15.5'}
     peerDependencies:
       eslint: ^8.0.0
@@ -5487,7 +5487,7 @@ snapshots:
 
   '@dual-bundle/import-meta-resolve@4.1.0': {}
 
-  '@dyb-dev/eslint-config@0.1.0(eslint@8.57.0)(typescript@5.5.4)':
+  '@dyb-dev/eslint-config@0.1.1(eslint@8.57.0)(typescript@5.5.4)':
     dependencies:
       '@typescript-eslint/eslint-plugin': 6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)
       '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.5.4)
