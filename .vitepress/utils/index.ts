@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-08-16 15:36:34
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-12 15:31:38
+ * @LastEditTime: 2024-09-30 15:42:24
  * @FilePath: /lib-docs-template/.vitepress/utils/index.ts
  * @Description: 构建工具函数模块
  */
@@ -27,16 +27,16 @@ import pkg from "../../package.json"
  */
 const generateProjectInfo = (env: ImportMetaEnv): IProjectInfo => {
 
-    const { name, version, devDependencies, dependencies = {} } = pkg
+    const { name, version, dependencies = {} } = pkg
     const _dayObj = dayjs()
     const _projectVersion = _dayObj.format("YYYYMMDDHHmmss")
     const _lastBuildTime = _dayObj.format("YYYY-MM-DD HH:mm:ss")
 
-    const _projectInfo = {
-        pkg: { name, version, devDependencies, dependencies },
+    const _projectInfo: IProjectInfo = {
         version: _projectVersion,
         lastBuildTime: _lastBuildTime,
-        env
+        env,
+        pkg: { name, version, dependencies }
     }
 
     return _projectInfo
