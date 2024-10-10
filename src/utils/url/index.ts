@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-06-28 14:19:02
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-30 15:41:16
+ * @LastEditTime: 2024-10-10 22:35:58
  * @FilePath: /lib-docs-template/src/utils/url/index.ts
  * @Description: url模块
  */
@@ -39,13 +39,13 @@ const spliceAssetsPath = (subPath: string): string => {
 
     let _path = `${subPath}?version=${__PROJECT_INFO__.version}`
 
-    /** 资源基础路径 */
-    const _assetsBasePath = __PROJECT_INFO__.env.VITE_ASSETS_BASE_PATH
+    /** 网站基础路径 */
+    const _basePath = __PROJECT_INFO__.env.VITE_BASE_PATH
 
-    // 如果存在资源基础路径，则拼接
-    if (_assetsBasePath) {
+    // 如果存在网站基础路径，则拼接
+    if (_basePath) {
 
-        _path = `${_assetsBasePath}${_path}`
+        _path = `${_basePath}${_path}`
 
     }
     return _path
