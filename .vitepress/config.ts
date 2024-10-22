@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-10-14 11:57:28
+ * @LastEditTime: 2024-10-22 16:15:29
  * @FilePath: /lib-docs-template/.vitepress/config.ts
  * @Description: VitePress配置文件
  */
@@ -254,6 +254,8 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
                 // 指定传递给 CSS 预处理器的选项
                 preprocessorOptions: {
                     scss: {
+                        // 使用最新的 js API编译
+                        api: "modern-compiler",
                         additionalData: `
                             @use "${projectRootDir}/src/styles/scss-var.scss" as *;
                             @use "${projectRootDir}/src/styles/mixins/index.scss" as *;
