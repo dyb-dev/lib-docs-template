@@ -1,8 +1,8 @@
 /*
  * @Author: dyb-dev
  * @Date: 2024-08-16 15:36:34
- * @LastEditors: dyb-dev
- * @LastEditTime: 2025-08-01 00:02:36
+ * @LastEditors: v_zhgtzhong
+ * @LastEditTime: 2025-08-01 00:59:49
  * @FilePath: /lib-docs-template/src/utils/url/index.ts
  * @Description: url相关工具函数
  */
@@ -219,7 +219,7 @@ export const toAbsoluteUrl = (options: IToAbsoluteUrlOptions): string => {
 
     let _url = [_urlOrigin, _basePath, _relativePath].filter(Boolean).join("/")
 
-    if (!isAbsoluteUrl(relativePath)) {
+    if (!isAbsoluteUrl(_url)) {
 
         _url = `/${_url}`
 
