@@ -32,10 +32,8 @@ const config: DefaultTheme.Sidebar = {
 }
 
 /** STATIC: `左侧边栏` 配置 */
-const sidebar = {
+export const sidebar = {
     rootDir,
     rootFilePath,
     config
 }
-
-export { sidebar }
