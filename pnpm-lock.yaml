@@ -27,7 +27,7 @@ importers:
         specifier: ~3.4.38
         version: 3.4.38(typescript@5.6.3)
       vue3-json-viewer:
-        specifier: ^2.2.2
+        specifier: ~2.2.2
         version: 2.2.2(vue@3.4.38(typescript@5.6.3))
     devDependencies:
       '@dyb-dev/eslint-config':
