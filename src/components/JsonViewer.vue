@@ -2,12 +2,12 @@
  * @Author: dyb-dev
  * @Date: 2024-08-14 14:22:59
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-08-15 16:09:10
- * @FilePath: /vitepress练习/components/JsonViewer.vue
+ * @LastEditTime: 2025-11-11 01:37:16
+ * @FilePath: /lib-docs-template/src/components/JsonViewer.vue
  * @Description: json预览组件（基于`JsonViewer`二次封装）
 -->
 
-<script setup lang="ts">
+<script setup lang="tsx">
 import { useData } from "vitepress"
 import { computed, reactive } from "vue"
 import { JsonViewer } from "vue3-json-viewer"
