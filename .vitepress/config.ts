@@ -15,7 +15,7 @@ import { sidebar as referenceSidebar } from "../src/views/reference"
 
 import { generateProjectInfo, getAvailableIPv4HostIP, setupVitePWAPlugin } from "./utils"
 
-import type { UserConfigFn, DefaultTheme } from "vitepress"
+import type { UserConfigFn, DefaultTheme, Plugin } from "vitepress"
 
 /** CONST: 顶部菜单配置 */
 const nav: DefaultTheme.NavItem[] = [
@@ -204,7 +204,7 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
 
         // markdown-it配置（作用于`markdown`文件）
         markdown: {
-            config(md) {
+            config (md) {
 
                 // 支持使用 :::preview 容器预览vue组件
                 md.use(<any>containerPreview)
@@ -270,7 +270,7 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
 
             plugins: [
                 // 处理和编译 .vue jsx/tsx 文件
-                ViteVueJsxPlugin(),
+                ViteVueJsxPlugin() as Plugin,
                 // 是否使用 PWA 离线访问 当 preview 时，带有路径前缀，则浏览器地址栏需要添加 index.html，因为PWA的缓存路径带有index.html，否则离线刷新页面会出现404
                 VITE_PWA === "true" &&
                     setupVitePWAPlugin({
@@ -280,12 +280,12 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
                     }),
                 // 是否使用https
                 VITE_PROTOCOL === "https" &&
-                    ViteMkcertPlugin({
+                    (ViteMkcertPlugin({
                         // 指定mkcert下载源
                         source: "coding",
                         // 证书保存路径
                         savePath: resolve(projectRootDir, "./dev-https-cert")
-                    })
+                    }) as Plugin)
             ],
 
             server: {
