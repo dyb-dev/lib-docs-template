@@ -1,11 +1,6 @@
 <!--
- * @Author: dyb-dev
- * @Date: 2024-07-01 22:28:05
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-10-16 00:57:52
- * @FilePath: /lib-docs-template/.vitepress/theme/Layout.vue
- * @Description: 自定义vitepress主题组件
--->
+ * @FileDesc: 自定义vitepress主题组件
+ -->
 
 <script setup lang="tsx">
 import { theme, ConfigProvider } from "ant-design-vue"

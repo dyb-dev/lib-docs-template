@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2025-08-16 13:36:38
- * @LastEditors: dyb-dev
- * @LastEditTime: 2025-08-16 13:37:07
- * @FilePath: /lib-docs-template/src/hooks/interaction/useCopyText.ts
- * @Description: 使用复制文本
+ * @FileDesc: 使用复制文本
  */
 
 import { message } from "ant-design-vue"

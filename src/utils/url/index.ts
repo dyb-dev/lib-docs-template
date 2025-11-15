@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-08-16 15:36:34
- * @LastEditors: dyb-dev
- * @LastEditTime: 2025-08-02 19:15:29
- * @FilePath: /lib-docs-template/src/utils/url/index.ts
- * @Description: url相关工具函数
+ * @FileDesc: url相关工具函数
  */
 
 import queryString from "query-string"
