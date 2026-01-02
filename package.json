@@ -1,6 +1,6 @@
 {
     "name": "lib-docs-template",
-    "version": "0.4.3",
+    "version": "0.5.0",
     "description": "基于`vitepress`搭建的库-文档-模板",
     "author": "dyb-dev",
     "license": "MIT",
@@ -14,7 +14,8 @@
         "build-only": "vitepress build",
         "preview": "vitepress preview",
         "ts-check": "vue-tsc --build --force",
-        "release": "project-cli release"
+        "release": "project-cli release",
+        "format": "prettier --write . && eslint --fix . && stylelint --fix . --allow-empty-input"
     },
     "engines": {
         "node": ">=18.0.0",
@@ -56,6 +57,7 @@
         "@vitepress-demo-preview/plugin": "^1.2.3",
         "eslint": "^8.57.1",
         "husky": "^9.1.6",
+        "lint-staged": "^16.2.7",
         "portfinder-sync": "^0.0.2",
         "prettier": "^3.3.3",
         "prettier-eslint": "^16.3.0",
@@ -85,5 +87,12 @@
         "query-string": "^9.1.1",
         "vue": "~3.4.38",
         "vue3-json-viewer": "~2.2.2"
+    },
+    "lint-staged": {
+        "*": [
+            "prettier --write",
+            "eslint --fix",
+            "stylelint --fix --allow-empty-input"
+        ]
     }
 }
